@@ -44,7 +44,9 @@
 						</ul>
 					</li>
 					<li><a href="logout.php"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
-				</ul>
+				</ul>				
+				<ul class="nav navbar-nav navbar-right">
+					</ul>
        			<span class="navbar-text ml-auto">
          		Halo, admin!
       			</span>
@@ -57,4 +59,4 @@
 		</div>
 	</nav>
 </body>
-</html>
+</html>		
