@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josjis Laundry - Premium Wash & Express</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        pinkSoft: '#F7ADAD',
+                        mintSoft: '#B1E5E6',
+                        darkText: '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-glow {
+            background: radial-gradient(circle at 50% -20%, #F7ADAD 0%, #B1E5E6 45%, #FAFAFC 80%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-[#FAFAFC] text-darkText font-sans antialiased selection:bg-pinkSoft selection:text-white min-h-screen">
+
+    <!-- Ambient Background Glow -->
+    <div class="fixed top-0 left-0 right-0 h-[500px] bg-glow opacity-60 pointer-events-none -z-10"></div>
+
+    <!-- NAVBAR FLOATING -->
+    <header class="fixed top-5 left-0 right-0 z-50 px-4">
+        <nav class="max-w-5xl mx-auto glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-lg shadow-pinkSoft/10">
+            <!-- Brand Logo -->
+            <a href="index.php" class="flex items-center gap-2 group">
+                <span class="text-2xl transition-transform group-hover:scale-110">🧼</span>
+                <span class="font-extrabold text-xl tracking-tight text-slate-800">Josjis<span class="text-[#E27070]">.Express</span></span>
+            </a>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
+                <a href="#home" class="hover:text-slate-900 transition-colors">Beranda</a>
+                <a href="#layanan" class="hover:text-slate-900 transition-colors">Layanan & Harga</a>
+                <a href="#konfirmasi" class="hover:text-slate-900 transition-colors">Form Ambil / Masukan</a>
+                <a href="#kontak" class="hover:text-slate-900 transition-colors">Kontak</a>
+            </div>
+
+            <!-- Login Button -->
+            <div>
+                <a href="index.php" class="bg-gradient-to-r from-mintSoft to-[#8CE0E2] text-slate-900 font-bold text-xs md:text-sm px-6 py-2.5 rounded-full shadow-md shadow-mintSoft/50 hover:shadow-lg hover:shadow-mintSoft/70 hover:-translate-y-0.5 transition-all inline-flex items-center gap-2">
+                    <span>Login Admin</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="pt-36 pb-16 px-4">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <div class="inline-flex items-center gap-2 bg-white/80 border border-pinkSoft/40 px-4 py-1.5 rounded-full shadow-sm text-xs font-bold text-[#E27070] backdrop-blur-md">
+                <span>✨ Layanan Laundry Premium</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 leading-[1.15]">
+                Pakaian Clean, Wangi & <br>
+                <span class="bg-gradient-to-r from-[#E27070] via-pinkSoft to-[#53B9BC] bg-clip-text text-transparent">Rapi Sepanjang Hari</span>
+            </h1>
+
+            <p class="text-base md:text-lg text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed">
+                Detergen ramah lingkungan, wangi aroma tahan lama, dan pengerjaan higienis tanpa merusak pakaian kesayangan Anda.
+            </p>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#konfirmasi" class="w-full sm:w-auto bg-gradient-to-r from-pinkSoft to-[#E27070] text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-pinkSoft/40 hover:shadow-pinkSoft/60 hover:-translate-y-1 transition-all">
+                    Form Ambil / Masukan 📝
+                </a>
+                <a href="#layanan" class="w-full sm:w-auto bg-white/80 border border-slate-200 text-slate-800 font-bold px-8 py-4 rounded-2xl shadow-sm hover:bg-white hover:-translate-y-1 transition-all">
+                    Lihat Paket & Harga
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYANAN & JAM OPERASIONAL SECTION -->
+    <section id="layanan" class="py-16 px-4">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold tracking-widest text-[#E27070] uppercase">Layanan & Operasional</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Jenis Layanan, Harga & Jam Buka</h2>
+            </div>
+
+            <!-- Jam Operasional Banner -->
+            <div class="glass-card p-6 md:p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 border border-white/80 shadow-sm">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-mintSoft/40 text-2xl flex items-center justify-center rounded-2xl shrink-0">
+                        ⏰
+                    </div>
+                    <div>
+                        <h4 class="font-extrabold text-slate-800 text-base">Jam Operasional Laundry</h4>
+                        <p class="text-slate-500 text-xs font-medium">Selalu Siap untuk Melayani Cucian Anda</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3 text-xs font-bold">
+                    <span class="bg-white px-4 py-2 rounded-xl border border-slate-200/80 text-slate-700">Senin - Sabtu: 07.00 - 20.00 WIB</span>
+                    <span class="bg-pinkSoft/20 text-[#D15555] px-4 py-2 rounded-xl border border-pinkSoft/30">Minggu: Libur</span>
+                </div>
+            </div>
+
+            <!-- Grid Cards Harga Layanan Per KG -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Paket 1 -->
+                <div class="glass-card p-8 rounded-3xl space-y-4 hover:-translate-y-1 transition-all duration-300 hover:shadow-xl hover:shadow-pinkSoft/20 hover:border-pinkSoft relative overflow-hidden">
+                    <div class="w-12 h-12 bg-pinkSoft/20 text-2xl flex items-center justify-center rounded-2xl">
+                        ☀️
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800">Cuci Kering</h3>
+                    <p class="text-slate-500 text-xs font-medium leading-relaxed">Pencucian higienis + pengeringan maksimal tanpa lipat/setrika.</p>
+                    <div class="pt-2 border-t border-slate-200/60 flex items-baseline justify-between">
+                        <span class="text-xs text-slate-400 font-semibold">Harga per Kg</span>
+                        <span class="text-2xl font-black text-[#E27070]">Rp 6.000 <span class="text-xs font-normal text-slate-500">/kg</span></span>
+                    </div>
+                </div>
+
+                <!-- Paket 2 -->
+                <div class="glass-card p-8 rounded-3xl space-y-4 hover:-translate-y-1 transition-all duration-300 hover:shadow-xl hover:shadow-mintSoft/30 hover:border-mintSoft">
+                    <div class="w-12 h-12 bg-mintSoft/30 text-2xl flex items-center justify-center rounded-2xl">
+                        🧺
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800">Cuci Komplit (Setrika)</h3>
+                    <p class="text-slate-500 text-xs font-medium leading-relaxed">Cuci bersih + pengering + setrika rapi & pewangi pilihan.</p>
+                    <div class="pt-2 border-t border-slate-200/60 flex items-baseline justify-between">
+                        <span class="text-xs text-slate-400 font-semibold">Harga per Kg</span>
+                        <span class="text-2xl font-black text-[#2BA6A8]">Rp 8.000 <span class="text-xs font-normal text-slate-500">/kg</span></span>
+                    </div>
+                </div>
+
+                <!-- Paket 3 -->
+                <div class="glass-card p-8 rounded-3xl space-y-4 hover:-translate-y-1 transition-all duration-300 hover:shadow-xl hover:shadow-pinkSoft/20 hover:border-pinkSoft">
+                    <div class="w-12 h-12 bg-pinkSoft/20 text-2xl flex items-center justify-center rounded-2xl">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800">Express (Satu Hari)</h3>
+                    <p class="text-slate-500 text-xs font-medium leading-relaxed">Layanan kilat selesai dalam 12 jam, rapi, siap pakai.</p>
+                    <div class="pt-2 border-t border-slate-200/60 flex items-baseline justify-between">
+                        <span class="text-xs text-slate-400 font-semibold">Harga per Kg</span>
+                        <span class="text-2xl font-black text-[#E27070]">Rp 12.000 <span class="text-xs font-normal text-slate-500">/kg</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM MASUKAN & KONFIRMASI AMBIL LAUNDRY -->
+    <section id="konfirmasi" class="py-16 px-4">
+        <div class="max-w-3xl mx-auto space-y-8">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold tracking-widest text-[#E27070] uppercase">Layanan Pelanggan</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Form Konfirmasi </h2>
+                <p class="text-slate-500 text-xs font-medium">Isi tabel di bawah ini untuk mengonfirmasi jadwal pengambilan atau memberikan saran.</p>
+            </div>
+
+            <div class="glass-card p-8 md:p-10 rounded-3xl shadow-xl shadow-pinkSoft/10 border border-white/80">
+                <form id="laundryForm" class="space-y-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <!-- Nama -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">Nama Lengkap *</label>
+                            <input type="text" id="nama" placeholder="Contoh: Nada Ramadhani" required
+                                class="w-full px-4 py-3 rounded-2xl bg-slate-50/80 border border-slate-200 text-xs font-medium focus:bg-white focus:border-pinkSoft outline-none transition-all">
+                        </div>
+
+                        <!-- No Telp / WA -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">No. WhatsApp / Telepon *</label>
+                            <input type="tel" id="notlp" placeholder="Contoh: 081234567890" required
+                                class="w-full px-4 py-3 rounded-2xl bg-slate-50/80 border border-slate-200 text-xs font-medium focus:bg-white focus:border-pinkSoft outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <!-- Jenis Paket Laundry -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">Jenis Paket Laundry *</label>
+                            <select id="jenis" onchange="hitungHarga()" class="w-full px-4 py-3 rounded-2xl bg-slate-50/80 border border-slate-200 text-xs font-medium focus:bg-white focus:border-pinkSoft outline-none transition-all">
+                                <option value="5000">Cuci Kering - Rp 6.000 /kg</option>
+                                <option value="7000" selected>Cuci Komplit (Setrika) - Rp 8.000 /kg</option>
+                                <option value="10000">Express 1 Hari - Rp 12.000 /kg</option>
+                            </select>
+                        </div>
+
+                        <!-- Estimasi Berat (Kg) -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">Estimasi Berat (Kg)</label>
+                            <input type="number" id="berat" value="1" min="1" oninput="hitungHarga()" placeholder="Masukkan berat..."
+                                class="w-full px-4 py-3 rounded-2xl bg-slate-50/80 border border-slate-200 text-xs font-medium focus:bg-white focus:border-pinkSoft outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <!-- Perhitungan Harga Otomatis -->
+                    <div class="p-4 rounded-2xl bg-mintSoft/20 border border-mintSoft/40 flex items-center justify-between">
+                        <span class="text-xs font-bold text-slate-700">Estimasi Total Harga:</span>
+                        <span id="totalHargaDisplay" class="text-lg font-black text-slate-800">Rp 8.000</span>
+                    </div>
+
+                    <!-- Catatan / Masukan -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-2">Catatan Khusus / Masukan</label>
+                        <textarea id="catatan" rows="3" placeholder="Contoh: Konfirmasi pengambilan jam 3 sore / Tolong baju putih dipisah..."
+                            class="w-full px-4 py-3 rounded-2xl bg-slate-50/80 border border-slate-200 text-xs font-medium focus:bg-white focus:border-pinkSoft outline-none transition-all"></textarea>
+                    </div>
+
+                    <!-- Submit Button via WhatsApp -->
+                    <button type="button" onclick="kirimFormWA()"
+                        class="w-full py-4 rounded-2xl bg-gradient-to-r from-pinkSoft to-[#E27070] text-white font-bold text-xs shadow-lg shadow-pinkSoft/40 hover:shadow-pinkSoft/60 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+                        <span>Kirim Konfirmasi / Masukan via WhatsApp</span>
+                        <span>📲</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK & ALAMAT LAUNDRY SECTION -->
+    <section id="kontak" class="py-16 px-4">
+        <div class="max-w-5xl mx-auto space-y-10">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold tracking-widest text-[#E27070] uppercase">Informasi Kontak</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Alamat Outlet & Customer Service</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Kontak WhatsApp -->
+                <div class="glass-card p-8 rounded-3xl text-center space-y-3">
+                    <div class="w-12 h-12 bg-mintSoft/30 text-2xl flex items-center justify-center rounded-2xl mx-auto">
+                        💬
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-base">WhatsApp Admin</h4>
+                    <p class="text-slate-500 text-xs font-medium">Layanan chat cepat & bantuan informasi:</p>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="inline-block text-xs font-extrabold text-[#25D366] hover:underline">
+                        0831- 2340- 3903 ➔
+                    </a>
+                </div>
+
+                <!-- Alamat Outlet -->
+                <div class="glass-card p-8 rounded-3xl text-center space-y-3">
+                    <div class="w-12 h-12 bg-pinkSoft/20 text-2xl flex items-center justify-center rounded-2xl mx-auto">
+                        📍
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-base">Alamat Laundry</h4>
+                    <p class="text-slate-500 text-xs font-medium leading-relaxed">
+                        Dsn Lbeari RT 03/RW 02, Kec.Limbnagan, Kab. Kendal.
+                    </p>
+                </div>
+
+                <!-- Email / Sosial Media -->
+                <div class="glass-card p-8 rounded-3xl text-center space-y-3">
+                    <div class="w-12 h-12 bg-mintSoft/30 text-2xl flex items-center justify-center rounded-2xl mx-auto">
+                        💌
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-base">Email & Sosial Media</h4>
+                    <p class="text-slate-500 text-xs font-medium leading-relaxed">
+                        josjislaundry@gmail.com<br>
+                        Instagram: @Josjis_laundry
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-16 border-t border-slate-200/60 py-8 text-center text-xs text-slate-400 font-medium">
+        <p>&copy; 2026 Josjis Laundry Express. by Lutfia Nada.</p>
+    </footer>
+
+    <!-- JavaScript Hitung Harga & Kirim WA -->
+    <script>
+        function hitungHarga() {
+            const harga = parseInt(document.getElementById('jenis').value);
+            const berat = parseInt(document.getElementById('berat').value) || 1;
+            const total = harga * berat;
+            document.getElementById('totalHargaDisplay').innerText = 'Rp ' + total.toLocaleString('id-ID');
+        }
+
+        function kirimFormWA() {
+            const nama = document.getElementById('nama').value;
+            const notlp = document.getElementById('notlp').value;
+            const jenisSelect = document.getElementById('jenis');
+            const jenisNama = jenisSelect.options[jenisSelect.selectedIndex].text;
+            const berat = document.getElementById('berat').value;
+            const total = document.getElementById('totalHargaDisplay').innerText;
+            const catatan = document.getElementById('catatan').value;
+
+            if (!nama || !notlp) {
+                alert('Silakan isi Nama dan No. WhatsApp terlebih dahulu!');
+                return;
+            }
+
+            const pesan = `Halo Admin Freshy Laundry,%0A%0A` +
+                `*FORM KONFIRMASI / MASUKAN LAUNDRY*%0A` +
+                `----------------------------------------%0A` +
+                `*Nama:* ${nama}%0A` +
+                `*No. Telp:* ${notlp}%0A` +
+                `*Paket Laundry:* ${jenisNama}%0A` +
+                `*Estimasi Berat:* ${berat} kg%0A` +
+                `*Estimasi Total:* ${total}%0A` +
+                `*Catatan/Masukan:* ${catatan ? catatan : '-'}%0A` +
+                `----------------------------------------%0A` +
+                `Mohon diproses, terima kasih!`;
+
+            // Mengarahkan langsung ke WhatsApp
+            window.open(`https://wa.me/6281234567890?text=${pesan}`, '_blank');
+        }
+    </script>
+
+</body>
+</html>
