@@ -41,15 +41,16 @@
 						<ul class="dropdown-menu">							
 							<li><a href="harga.php"><i class="glyphicon glyphicon-usd"></i> Pengaturan Harga</a></li>
 							<li><a href="ganti_password.php"><i class="glyphicon glyphicon-lock"></i> Ganti Password</a></li>
+							<li><a href="sub_user.php"><i class="glyphicon glyphicon-user"></i> Sub-User</a></li>
 						</ul>
 					</li>
 					<li><a href="logout.php"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
 				</ul>				
 				<ul class="nav navbar-nav navbar-right">
 					</ul>
-       			<span class="navbar-text ml-auto">
-         		Halo, admin!
-      			</span>
+       		<p class="navbar-text navbar-right">
+				Halo,Admin!
+			</p>
      		</div>
    		</div>
  	</nav>
